@@ -19,9 +19,6 @@ public class Matches {
             } else {
                 System.out.println("Неверное число");
             }
-        if (count <=  0) {
-                System.out.println("Игра завершена.");
-            }
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
