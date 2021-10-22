@@ -17,6 +17,7 @@ public class StartUITest {
         Item expected = new Item("Fix PC");
         assertThat(created.getName(), is(expected.getName()));
     }
+
     @Test
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
@@ -66,7 +67,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(item.getId()),replacedName, "1"}
+                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         UserAction[] actions = {
                 new ReplaceItem(output),
@@ -104,8 +105,8 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Exit Program" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                       + "0. Exit Program" + System.lineSeparator()
         ));
     }
 
@@ -154,8 +155,8 @@ public class StartUITest {
         assertThat(out.toString(), is(
                 "Menu." + ln + "0. Show all items"
                         + ln + "1. Exit Program" + ln + "=== Show all items ===="
-                        + ln + one + ln +
-                        "Menu." + ln + "0. Show all items"
+                        + ln + one + ln
+                        + "Menu." + ln + "0. Show all items"
                         + ln + "1. Exit Program" + ln
         ));
     }
