@@ -6,6 +6,7 @@ public class UserStore {
         for (User user : users) {
             if (user.getUsername().equals(login)) {
                 user = name;
+                break;
             }
         }
             if (name == null) {
