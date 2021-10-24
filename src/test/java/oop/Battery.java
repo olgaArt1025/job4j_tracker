@@ -13,7 +13,7 @@ public class Battery {
     }
 
     public static void main(String[] args) {
-        Battery first= new Battery(10);
+        Battery first = new Battery(10);
         Battery second = new Battery(5);
         System.out.println("first :" + first.load + " second :" + second.load);
         second.exchange(first);

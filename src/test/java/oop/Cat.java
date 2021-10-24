@@ -7,14 +7,14 @@ public class Cat {
 
     public void show() {
         System.out.println(this.name);
-        System.out.println("There are food"+" "+ this.food);
+        System.out.println("There are food" + " " + this.food);
     }
 
     public void eat(String meat) {
         this.food = meat;
     }
 
-    public void giveNick(String nick){
+    public void giveNick(String nick) {
         this.name = nick;
     }
 
