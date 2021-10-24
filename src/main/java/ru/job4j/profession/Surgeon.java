@@ -10,9 +10,4 @@ public class Surgeon extends Doctor {
     public String gettypeSurgeon() {
         return this.typeSurgeon;
     }
-
-    public static void main(String[] args) {
-        Surgeon surgeon = new Surgeon("Ivan", "Ivanov", "surgeon", "10/09/1975");
-        System.out.println(surgeon.getSurname() + " " + surgeon.getEducation());
-    }
 }

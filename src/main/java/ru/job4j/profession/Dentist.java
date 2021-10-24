@@ -11,9 +11,4 @@ public class Dentist extends Doctor {
     public String getTypeDentist() {
         return typeDentist;
     }
-
-    public static void main(String[] args) {
-        Dentist dentist = new Dentist("Aleksandr", "Petrov", "dentist", "10/03/1990");
-        System.out.println(dentist.getName());
-    }
 }

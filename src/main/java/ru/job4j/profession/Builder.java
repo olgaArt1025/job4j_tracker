@@ -14,11 +14,5 @@ public class Builder extends Engineer {
     public static void main(String[] args) {
         Clients client = new Clients();
         client.chosenColor("White");
-        Builder builder = new Builder("Mark", "Foster", "builder",
-                "09/06/1978"
-        );
-        System.out.println(builder.getName() + " works as a " + builder.getEducation()
-                + " His birthday is " + builder.getBirthday()
-        );
     }
 }
