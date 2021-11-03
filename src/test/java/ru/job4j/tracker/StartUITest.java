@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -55,7 +56,7 @@ public class StartUITest {
                 new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new CreateAction(output));
         actions.add(new ExitAction(output));
 
@@ -72,7 +73,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
                 actions.add(new ReplaceItem(output));
                 actions.add(new ExitAction(output));
 
@@ -88,7 +89,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
             actions.add(new DeleteItem(output));
             actions.add(new ExitAction(output));
 
@@ -103,7 +104,7 @@ public class StartUITest {
                 new String[] {"0"}
         );
         Tracker tracker = new Tracker();
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ExitAction(out));
 
         new StartUI(out).init(in, tracker, actions);
@@ -122,7 +123,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), replaceName, "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
                 actions.add(new ReplaceItem(out));
                 actions.add(new ExitAction(out));
 
@@ -149,7 +150,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ShowItem(out));
         actions.add(new ExitAction(out));
 
@@ -173,7 +174,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", name, "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+       List<UserAction> actions = new ArrayList<>();
         actions.add(new FindItemByName(out));
         actions.add(new ExitAction(out));
 
@@ -200,7 +201,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), "1"}
         );
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
                 actions.add(new FindItemById(out));
                 actions.add(new ExitAction(out));
 
@@ -226,7 +227,7 @@ public class StartUITest {
                 new String[] {"7", "0"}
         );
         Tracker tracker = new Tracker();
-        ArrayList<UserAction> actions = new ArrayList<UserAction>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ExitAction(out));
 
         new StartUI(out).init(in, tracker, actions);
