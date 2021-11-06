@@ -23,6 +23,6 @@ public class PassportOfficeTest {
         PassportOffice office = new PassportOffice();
         office.add(citizen);
         office.add(citizen2);
-        assertThat(office.add(citizen3), is(false));
+        assertFalse(office.add(citizen3));
     }
 }
