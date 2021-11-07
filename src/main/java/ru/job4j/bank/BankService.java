@@ -10,7 +10,7 @@ import java.util.Map;
  * регистрировать пользователя, удалять пользователя из системы,
  * добавлять пользователю банковский счет, переводить деньги.
  *  @author Olga Art
- *  @version 2.0
+ *  @version 1.0
  */
 public class BankService {
     /**
