@@ -67,3 +67,4 @@ public class SchoolTest {
         assertThat(rsl, is(expected));
     }
 }
+

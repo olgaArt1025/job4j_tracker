@@ -12,4 +12,3 @@ public class School {
         return rsl;
     }
 }
-
