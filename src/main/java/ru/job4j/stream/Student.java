@@ -38,3 +38,4 @@ public class Student {
         return Objects.hash(score, surname);
     }
 }
+
