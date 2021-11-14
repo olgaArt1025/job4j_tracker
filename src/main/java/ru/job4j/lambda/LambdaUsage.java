@@ -7,7 +7,7 @@ public class LambdaUsage {
     public static void main(String[] args) {
         String[] strings = {"1", "55555", "4444", "22", "333"};
         Comparator<String> cmpDescSize = (left, right) -> {
-            System.out.println("compare - " + right.length() + " : " + left.length());
+            System.out.println("compare - " + left.length() + " : " + right.length());
                 return Integer.compare(right.length(), left.length());
         };
         Arrays.sort(strings, cmpDescSize);
