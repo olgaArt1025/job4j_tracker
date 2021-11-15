@@ -21,4 +21,22 @@ public class ProfilesTest {
        );
         assertThat(rsl, is(expected));
     }
+
+    @Test
+    public void whenCollectReplayAddress() {
+        List<Profile> profile = List.of(
+                new Profile(new Address("Moscow", " Nikolskaya", 25, 35)),
+                new Profile(new Address("Ekaterinburg", "Cosmonauts Avenue", 109, 58)),
+                new Profile(new Address("Ekaterinburg", "Cosmonauts Avenue", 109, 58)),
+                new Profile(new Address("Ekaterinburg", "Malysheva", 28, 49))
+        );
+        Profiles pr = new Profiles();
+        List<Address> rsl = pr.collectCity(profile);
+        List<Address> expected = List.of(
+                new Address("Ekaterinburg", "Cosmonauts Avenue", 109, 58),
+                new Address("Ekaterinburg", "Malysheva", 28, 49),
+                new Address("Moscow", " Nikolskaya", 25, 35)
+        );
+        assertThat(rsl, is(expected));
+    }
 }

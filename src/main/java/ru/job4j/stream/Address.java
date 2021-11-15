@@ -32,4 +32,12 @@ public class Address {
     public int hashCode() {
         return Objects.hash(city, street, home, apartment);
     }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }
