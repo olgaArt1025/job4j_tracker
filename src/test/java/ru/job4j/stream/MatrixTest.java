@@ -15,7 +15,7 @@ public class MatrixTest {
         Integer[][] matrix = {{1, 2, 3}, {4, 5}};
         Matrix matrix1 = new Matrix();
         List<Integer> rsl = matrix1.convert(matrix);
-        List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> expected = List.of(1, 2, 3, 4, 5);
         assertThat(rsl, is(expected));
     }
 
@@ -24,7 +24,7 @@ public class MatrixTest {
         Integer[][] matrix = {{10, 27, 13}, {41, 105, 4}};
         Matrix matrix1 = new Matrix();
         List<Integer> rsl = matrix1.convert(matrix);
-        List<Integer> expected = Arrays.asList(10, 27, 13, 41, 105, 4);
+        List<Integer> expected = List.of(10, 27, 13, 41, 105, 4);
         assertThat(rsl, is(expected));
     }
 }
