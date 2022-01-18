@@ -94,4 +94,16 @@ public class SqlTrackerTest {
         tracker.delete(item1.getId());
         assertNull(tracker.findById(item1.getId()));
     }
+
+    @Test
+    public void whenSaveItemAndfindAll() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item item1 = new Item("item1");
+        Item item2 = new Item("item2");
+        Item item3 = new Item("item3");
+        tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        assertThat(tracker.findAll(), is(List.of(item1, item2, item3)));
+    }
 }
