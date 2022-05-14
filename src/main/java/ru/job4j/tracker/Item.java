@@ -15,6 +15,7 @@ public class Item {
     private int id;
     private String name;
     private LocalDateTime created = LocalDateTime.now();
+    private String description;
 
     public Item() {
     }
@@ -32,6 +33,14 @@ public class Item {
         this.id = id;
         this.name = name;
         this.created = created;
+    }
+
+    public static Item of(String name,  LocalDateTime created, String description) {
+        Item item = new Item();
+        item.name = name;
+        item.created = created;
+        item.description = description;
+        return item;
     }
 
     public int getId() {
@@ -52,6 +61,14 @@ public class Item {
 
     public LocalDateTime getCreated() {
        return created;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public static void main(String[] args) {
