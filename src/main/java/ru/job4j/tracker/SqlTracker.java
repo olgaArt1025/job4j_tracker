@@ -105,6 +105,18 @@ public class SqlTracker implements Store {
         return items;
     }
 
+    public void findAllByReact(Observe<Item> observe) {
+        try (PreparedStatement statement =
+                     cn.prepareStatement("select * from items")) {
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                observe.receive(getItem(result));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public List<Item> findByName(String key) {
         List<Item> items = new ArrayList<>();
